@@ -1,0 +1,358 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Monsieur La Doulaise';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Monsieur La Doulaise Regular'), local('MonsieurLaDoulaise-Regular'), url(https://fonts.gstatic.com/s/monsieurladoulaise/v8/_Xmz-GY4rjmCbQfc-aPRaa4pqV340p7EZm5XyEAk4A.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Monsieur La Doulaise';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Monsieur La Doulaise Regular'), local('MonsieurLaDoulaise-Regular'), url(https://fonts.gstatic.com/s/monsieurladoulaise/v8/_Xmz-GY4rjmCbQfc-aPRaa4pqV340p7EZm5ZyEA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }  
+
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+*{
+	margin:0;
+    padding:0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: "header main-content footer";
+    grid-template-columns: 65px 1fr 30px;
+}
+
+
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+.header{
+    grid-area: header;
+    background-color: #fff;
+    display: grid;
+    grid-template-areas: "logo"
+                         "menu";
+    grid-template-rows: 65px 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header .logo{
+    grid-area: logo;
+}
+
+.header .logo .text{
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-size: 2.5rem;
+    font-weight: 500;
+    animation: fadeEffect 1s;
+}
+
+.header .menu{
+    grid-area: menu;
+}
+
+.header .menu ul li{
+    padding: 10px 0;
+}
+
+.main-content{
+    display: grid;
+    grid-area: main-content;
+    background-color: #fff;
+    align-items: center;
+    justify-items: center;
+    overflow-y: auto;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.footer{
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+    grid-area: footer;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.footer .menu li{
+    margin: 30px 0;
+}
+
+.footer .menu li{
+    transform: rotate(90deg);
+    font-weight: bold;
+    border-bottom: solid 1px red;
+}
+
+/* TABS */
+.tabcontent{
+    display: none;
+}
+
+.active a img{
+    /* background: sandybrown; */
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    overflow: hidden;
+}
+
+.block1{
+    grid-template-areas: "visible info";
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.visible{
+    grid-area: visible;
+    width: 80%;
+    position: relative;
+}
+
+.background{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    background: rgb(241, 239, 239);
+    display: grid;
+    align-items: end;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-family: 'Orbitron', serif;
+}
+
+.avatar{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 0;
+    right: 0;
+}
+
+.info{
+    grid-area: info;
+    align-items: center;
+}
+.info .resume{
+    margin-top: 20px;
+
+}
+.info .resume .resume-button{
+    border: solid 1px red;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+.info .resume .resume-button:hover{
+    cursor: pointer;
+    border-color: green;
+}
+.hello{
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-size: 5rem;
+}
+
+.block2{
+    grid-template-areas: "title"
+                         "content";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.block2 .title{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-area: title;
+    grid-column: auto;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 30px 0;
+}
+
+.block2 .content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 0 30px;
+}
+.content .project-item{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+}
+.content .project-item img{
+    width: 100%;
+    height: auto;
+}
+.content .project-item .product-info{
+    text-align: center;
+}
+
+
+@keyframes scale-up-center{
+    0%{
+        transform: scale(1)
+    }
+    100%{
+        transform: scale(1.2)
+    }
+}
+.img-exprience{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.work-experience-item{
+    display: grid;
+    grid-column: auto auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.block3{
+    width: 100%;
+
+}
+.work-experience-item img{
+    width: 100%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        grid-template-areas: "header"
+                             "main-content"
+                             "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 45px;
+    }
+    .header{
+        justify-items: center;
+    }
+
+    .header.logo{
+        grid-row: auto;
+    }
+
+    .header .menu ul li{
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .block1{
+        grid-template-areas: "visible"
+                            "info";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .visible{
+        position: relative;
+        width: 650px;
+        height: 650px;
+    }
+
+    .info{
+        width: 650px;
+        height: auto;
+    }
+    .block2 .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer .menu li{
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .footer{
+        align-items: center;
+    }
+    .footer .menu{
+        margin: 0;
+        padding: 0;
+    }
+    .footer .menu li{
+        transform: rotate(0deg);
+        font-weight: bold;
+        border-bottom: solid 1px red;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    
+    .visible{
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+
+    .info{
+        width: 300px;
+        height: auto;
+    }
+    .background h1{
+        font-size: .8em;
+    }
+    .background p{
+        font-size: .5em;
+    }
+
+    .footer .menu li{
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .footer{
+        align-items: center;
+    }
+    .footer .menu{
+        margin: 0;
+        padding: 0;
+    }
+    .footer .menu li{
+        transform: rotate(0deg);
+        font-weight: bold;
+        border-bottom: solid 1px red;
+    }
+    
+}
