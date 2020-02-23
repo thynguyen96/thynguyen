@@ -9,8 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
 
 </head>
 
@@ -26,16 +28,27 @@
                 <ul>
                     <li class="tablinks" onclick="openCity(event, 'home')" id="defaultOpen">
                         <!-- <i class="icon ion-ios-home"></i> -->
-                        <a href="javascript:void(0)"><img src="assets/images/icons/home.png" alt="" ></a>
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-user-alt"></i>
+                            <!-- <span>about</span> -->
+                            <!-- <img src="assets/images/icons/home.png" alt=""> -->
+                        </a>
+                        <!-- <span>About</span> -->
                     </li>
                     <li class="tablinks" onclick="openCity(event, 'user')">
-                        <a href="javascript:void(0)"><img src="assets/images/icons/user.png" alt=""></a>
+                        <a href="javascript:void(0)">
+                            <!-- <img src="assets/images/icons/user.png" alt=""> -->
+                            <i class="fas fa-briefcase"></i>
+                        </a>
                     </li>
-                    <li class="tablinks" onclick="openCity(event, 'suitcase')">
+                    <!-- <li class="tablinks" onclick="openCity(event, 'suitcase')">
                         <a href="javascript:void(0)"><img src="assets/images/icons/suitcase.png" alt=""></a>
-                    </li>
+                    </li> -->
                     <li class="tablinks" onclick="openCity(event, 'contact')">
-                        <a href="javascript:void(0)"><img src="assets/images/icons/contact.png" alt=""></a>
+                        <a href="javascript:void(0)">
+                            <!-- <img src="assets/images/icons/contact.png" alt=""> -->
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -79,132 +92,58 @@
                     </p><br>
 
                     <div class="resume">
-                        <span class="resume-button">
+                        <a href="" class="resume-button">Download RESUME</a>
+                        <!-- <span class="resume-button">
                             RESUME
-                        </span>
+                        </span> -->
                     </div>
                 </div>
             </div>
 
             <div id="user" class="tabcontent block2">
                 <div class="title">
-                    <div>
+                    <!-- <div>
                         <h1>PORTFOLIO</h1>
                     Check out the projects to read more about the build process, code, and deploys.
+                    </div> -->
+                    <div class="divider-title">
+                        <div class="divider"></div>
+                        <h1 class="more-heading">Made with 💙 & ☕ in Sai Gon</h1>
+                        <div class="divider"></div>
                     </div>
                 </div>
+                
                 <div class="content">
-                    <div class="project-item">
-                        <img src="assets/images/products/blouse.jpg" alt="">
-                        <div class="product-info">
+                    <div class="project-card">
+                        <a href="">
+                            <img src="./assets/images/card1.jpeg" alt="">
+                        </a>
+                        <div class="excerpt">
                             <div class="project-title">
-                                Grouper
-                            </div>
-                            <div class="project-description">
-                                Grouper
-                            </div>
-                            <div class="project-technical">
-                                HTML/CSS/React/Redux
+                                <a href="">by Thy with love  </a>
                             </div>
                         </div>
+                        <a href="" class="tag"># Javascript</a>
                     </div>
-                    <div class="project-item">
-                        <img src="assets/images/products/blouse.jpg" alt="">
-                        <div class="product-info">
+                    <div class="project-card">
+                        <a href="">
+                            <img src="./assets/images/card1.jpeg" alt="">
+                        </a>
+                        <div class="excerpt">
                             <div class="project-title">
-                                Grouper
-                            </div>
-                            <div class="project-description">
-                                Grouper
-                            </div>
-                            <div class="project-technical">
-                                HTML/CSS/React/Redux
+                                <a href="">Read Arduino Serial Monitor Using NodeJS</a>
                             </div>
                         </div>
+                        <a href="" class="tag"># Javascript</a>
                     </div>
-                    <div class="project-item">
-                        <img src="assets/images/products/blouse.jpg" alt="">
-                        <div class="product-info">
-                            <div class="project-title">
-                                Grouper
-                            </div>
-                            <div class="project-description">
-                                Grouper
-                            </div>
-                            <div class="project-technical">
-                                HTML/CSS/React/Redux
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <img src="assets/images/products/blouse.jpg" alt="">
-                        <div class="product-info">
-                            <div class="project-title">
-                                Grouper
-                            </div>
-                            <div class="project-description">
-                                Grouper
-                            </div>
-                            <div class="project-technical">
-                                HTML/CSS/React/Redux
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="project-item">
-                        <img src="assets/images/products/blouse_orange.jpg" alt="">
-                    </div>
-                    <div class="project-item">
-                        <img src="assets/images/products/printed-summer-dress.jpg" alt="">
-                    </div>
-                    <div class="project-item">
-                        <img src="assets/images/products/faded-short-sleeves-tshirt_2.jpg" alt="">
-                    </div> -->
                 </div>
             </div>
 
             <div id="suitcase" class="tabcontent block2 block3">
                 <div class="title">
                     <ul>
-                        <li><a href="">Work Experience</a></li>
+                        <li><a href="">You are the only one here</a></li>
                     </ul>
-                </div>
-                <div class="content">
-                    <div class="work-experience-item">
-                        <div class="img-exprience">
-                            <img src="assets/images/products/blouse.jpg" alt="">
-                        </div>
-                        <div>
-                            <div class="job-des">Developer</div>
-                            <div class="time">2014-2018</div>
-                        </div>
-                    </div>
-                    <div class="work-experience-item">
-                        <div class="img-exprience">
-                            <img src="assets/images/products/blouse.jpg" alt="">
-                        </div>
-                        <div>
-                            <div class="job-des">Developer</div>
-                            <div class="time">2014-2018</div>
-                        </div>
-                    </div>
-                    <div class="work-experience-item">
-                        <div class="img-exprience">
-                            <img src="assets/images/products/blouse.jpg" alt="">
-                        </div>
-                        <div>
-                            <div class="job-des">Developer</div>
-                            <div class="time">2014-2018</div>
-                        </div>
-                    </div>
-                    <div class="work-experience-item">
-                        <div class="img-exprience">
-                            <img src="assets/images/products/blouse.jpg" alt="">
-                        </div>
-                        <div>
-                            <div class="job-des">Developer</div>
-                            <div class="time">2014-2018</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -216,26 +155,9 @@
         <div class="footer">
             <!-- Footer -->
         <ul class="menu">
-            <li>
-                <a href="#home">
-                    <i class="fab fa-behance">Be</i>
-                </a>
-            </li>
-            <li>
-                <a href="#home">
-                    <i class="fab fa-linkedin-in">In</i>
-                </a>
-            </li>
-            <li>
-                <a href="#home">
-                    <i class="fab fa-twitter">T</i>
-                </a>
-            </li>
-            <li>
-                <a href="#home">
-                    <i class="fab fa-github">G</i>
-                </a>
-            </li>
+            <li><a href="#home"> <i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#home"> <i class="fab fa-github-square"></i></a></li>
+            <li><a href="#home"><i class="fab fa-twitter"></i></a></li>
         </ul>
         </div>
     </div>

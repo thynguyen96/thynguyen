@@ -53,7 +53,7 @@ a{
 
 .header{
     grid-area: header;
-    background-color: #fff;
+    background-color: #F8F9FA;
     display: grid;
     grid-template-areas: "logo"
                          "menu";
@@ -81,6 +81,32 @@ a{
 .header .menu ul li{
     padding: 10px 0;
 }
+.header .menu ul li{
+    background: white;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    position: relative;
+}
+.header .menu ul li span{
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+}
+
+
+.header .menu ul li i{
+    padding-bottom: 5px;
+    color: #ced4da
+}
+
+.active a i{
+    color: #495057 !important;
+}
+
 
 .main-content{
     display: grid;
@@ -98,7 +124,11 @@ a{
     align-items: flex-end;
     grid-area: footer;
     background-color: #fff;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.30), 0 10px 8px rgba(0,0,0,0.1);
+}
+.footer .menu{
+    margin-right: 5px !important;
 }
 
 .footer .menu li{
@@ -108,7 +138,12 @@ a{
 .footer .menu li{
     transform: rotate(90deg);
     font-weight: bold;
-    border-bottom: solid 1px red;
+    /* border-bottom: solid 1px red; */
+}
+
+.footer .menu li a i{
+    color: red;
+    font-size: 18px;
 }
 
 /* TABS */
@@ -116,11 +151,11 @@ a{
     display: none;
 }
 
-.active a img{
-    /* background: sandybrown; */
+/* .active a img{
+    background: sandybrown;.....
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     overflow: hidden;
-}
+} */
 
 .block1{
     grid-template-areas: "visible info";
@@ -168,10 +203,14 @@ a{
 
 }
 .info .resume .resume-button{
-    border: solid 1px red;
-    padding: 10px;
-    border-radius: 10px;
-    background: white;
+    font-family: "IBM Plex Mono", monospace;
+    background: #00ff00;
+    border: 2px solid #00bb00;
+    color: #002200;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-size: 14px;
 }
 .info .resume .resume-button:hover{
     cursor: pointer;
@@ -188,11 +227,10 @@ a{
     grid-template-rows: auto 1fr;
     grid-template-columns: 100%;
     height: 100%;
-    width: 100%;
+    width: 80%;
 }
 
 .block2 .title{
-    display: grid;
     text-align: center;
     justify-content: center;
     grid-area: title;
@@ -202,26 +240,70 @@ a{
     padding: 30px 0;
 }
 
+.block2 .title .divider-title {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.block2 .title .divider-title .divider {
+    flex: 1;
+    height: 3px;
+    background: #444;
+}
+.block2 .title .divider-title h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 30px;
+    margin: 0 20px;
+}
 .block2 .content{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    padding: 0 30px;
-}
-.content .project-item{
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    height: auto;
-}
-.content .project-item img{
-    width: 100%;
-    height: auto;
-}
-.content .project-item .product-info{
-    text-align: center;
+    text-align: left;
 }
 
+.content .project-card{
+    font-family: "IBM Plex Mono", monospace;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.content .project-card .excerpt .project-title a{
+    color: #111;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content .project-card  a.tag {
+    font-family: "IBM Plex Mono", monospace;
+    background: #00ff00;
+    border: 2px solid #00bb00;
+    color: #002200;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 5px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+}
+
+.content .project-card .excerpt{
+    padding: 10px 20px;
+}
+.content .project-card a img{
+    width: 100%;
+}
 
 @keyframes scale-up-center{
     0%{
@@ -314,7 +396,7 @@ a{
     .footer .menu li{
         transform: rotate(0deg);
         font-weight: bold;
-        border-bottom: solid 1px red;
+        /* border-bottom: solid 1px red; */
     }
 }
 
@@ -352,7 +434,7 @@ a{
     .footer .menu li{
         transform: rotate(0deg);
         font-weight: bold;
-        border-bottom: solid 1px red;
+        /* border-bottom: solid 1px red; */
     }
     
 }
